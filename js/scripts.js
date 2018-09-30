@@ -2,8 +2,6 @@
 Write a function that buids an HTML table with the data below. The table should have four columns:
 first name, last name, position, and year. If the player is a Senior, her information should be in bold.
 */
-
-var first = 
 var players = [
   {
     first:'Angela',
@@ -49,14 +47,24 @@ var players = [
   }
 ];
 //Write your function here
-function playerTable{
-  for(i = 0; i < players.length; i++){
-    first = document.getElementById('col1');
-    last = document.getElementById('col2');
-    position = document.getElementById('col3');
-    year = document.getElementById('col4');
+function playerTable(){
+
+for(i = 0; i < players.length; i++){
+    /*document.getElementById('col1').innerHTML = players.first;
+    document.getElementById('col2').innerHTML = players.last;
+    document.getElementById('col3').innerHTML = players.position;
+    document.getElementById('col4').innerHTML = players.year;*/
+
+    document.getElementById('col1').innerHTML += '<td>' + players[i].first;
+    document.getElementById('col2').innerHTML += '<td>' + players[i].last;
+    document.getElementById('col3').innerHTML += '<td>' + players[i].position;
+    document.getElementById('col4').innerHTML+= '<td>' + players[i].year;
+    document.getElementById('col4').innerHTML+= '</td>';
+
+
   }
-  }
+
+}
 playerTable();
 /*
 EXTRA CREDIT CHALLENGE (5 POINTS): Write a function that compares the list above with the list below, finds the players that made the All-State team, and displays a message with the results: "Congratulations to Springfield's 2018 North Carolina All-State honorees: ____." Display the message in a div below the table.
@@ -105,5 +113,8 @@ Hint: You need two loops, one of which will be 'nested'.*/
   school: 'Springfield High School'
   }
 ];
-
+*/
+/*
 https://www.w3schools.com/js/js_htmldom_html.asp
+https://www.w3schools.com/js/js_htmldom_elements.asp
+*/
