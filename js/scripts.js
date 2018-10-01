@@ -50,24 +50,26 @@ var res = document.getElementById('table-content');
 var html = '';
 
 //Write your function here
-function playerTable(){
-for(i = 0; i < players.length; i++){
-      html += '<td>' + players[i].first;
-      html += '<td>' + players[i].last ;
-      html += '<td>' + players[i].position;
-      html += '<td>' + players[i].year + '<tr>'+ '</tr>';
-      html += '</td>';
-    } res.innerHTML = '<table>' + html + '</table>';
-
-    if (players.year == 'Senior'){
-      html += '<b>' + players[i].first + '</b>';
-      html += '<b>' + players[i].last + '</b>';
-      html += '<b>' + players[i].position + '</b>';
-      html += '<b>' + players[i].year + '</b>';
-    }res.innerHTML = '<tr>' + html + '</tr>';
+function playerTable(array){
+for(i = 0; i < array.length; i++){
+  if (array.year == 'Senior'){
+      html += '<tr> <b>' + array[i].first + '</b>';
+      html += '<tr><b>' + array[i].last + '</b>';
+      html += '<tr><b>' + array[i].position + '</b>';
+      html += '<tr><b>' + array[i].year + '</b>';
+      html += '</tr>';
+    }
+  else{
+    html += '<td>' + array[i].first;
+    html += '<td>' + array[i].last;
+    html += '<td>' + array[i].position;
+    html += '<td>' + array[i].year + '<tr> </tr>';
+    html += '</td>';
+  }
 }
-playerTable();
-
+res.innerHTML = '<table>' + html + '</table>';
+}
+playerTable(players);
 
 
 /*
