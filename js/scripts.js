@@ -48,6 +48,7 @@ var players = [
 ];
 var res = document.getElementById('table-content');
 var html = '';
+
 //Write your function here
 function playerTable(){
 for(i = 0; i < players.length; i++){
@@ -56,26 +57,17 @@ for(i = 0; i < players.length; i++){
       html += '<td>' + players[i].position;
       html += '<td>' + players[i].year + '<tr>'+ '</tr>';
       html += '</td>';
-    }
-    res.innerHTML = '<table>' + html + '</table>';
+    } res.innerHTML = '<table>' + html + '</table>';
+
+    if (players.year == 'Senior'){
+      html += '<b>' + players[i].first + '</b>';
+      html += '<b>' + players[i].last + '</b>';
+      html += '<b>' + players[i].position + '</b>';
+      html += '<b>' + players[i].year + '</b>';
+    }res.innerHTML = '<tr>' + html + '</tr>';
 }
-
 playerTable();
-/*for(i = 0; i < players.length; i++){
-    document.getElementById('col1').innerHTML += '<td>' + players[i].first;
-    document.getElementById('col2').innerHTML += '<td>' + players[i].last;
-    document.getElementById('col3').innerHTML += '<td>' + players[i].position;
-    document.getElementById('col4').innerHTML+= '<td>' + players[i].year;
-    document.getElementById('col4').innerHTML+= '</td>';
-  }
-  if (players.year == 'Senior'){
-     year.bold();
-     tr.first.bold();
-     tr.last.bold();
-     tr.position.bold();
-  }
 
-}*/
 
 
 /*
@@ -130,4 +122,5 @@ Hint: You need two loops, one of which will be 'nested'.*/
 https://www.w3schools.com/js/js_htmldom_html.asp
 https://www.w3schools.com/js/js_htmldom_elements.asp
 https://www.w3schools.com/js/js_htmldom_css.asp
+https://www.w3schools.com/jsref/jsref_bold.asp
 */
