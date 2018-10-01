@@ -52,12 +52,13 @@ var html = '';
 //Write your function here
 function playerTable(array){
 for(i = 0; i < array.length; i++){
-  if (array.year == 'Senior'){
+  if (array[i].year == 'Senior'){
       html += '<tr> <b>' + array[i].first + '</b>';
       html += '<tr><b>' + array[i].last + '</b>';
       html += '<tr><b>' + array[i].position + '</b>';
       html += '<tr><b>' + array[i].year + '</b>';
       html += '</tr>';
+      console.log("you're a senior");
     }
   else{
     html += '<td>' + array[i].first;
