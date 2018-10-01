@@ -9,41 +9,41 @@ var players = [
     position: 'Guard',
     year: 'Junior'
   },
-    {
+  {
     first:'Ashley',
     last: 'Roberts',
     position: 'Guard',
     year: 'Senior'
   },
-    {
+  {
     first:'Sarah',
     last: 'Spangler',
     position: 'Forward',
     year: 'Freshman'
   },
-   {
+  {
     first:'Catherine',
     last: 'McAllister',
     position: 'Forward',
     year: 'Senior'
   },
-   {
+  {
     first:'Haley',
     last: 'Bishop',
     position: 'Center',
     year: 'Sophomore'
   },
   {
-   first:'Renee',
-   last: 'Williams',
-   position: 'Guard',
-   year: 'Senior'
- },
- {
-  first:'Jennifer',
-  last: 'Olsen',
-  position: 'Forward',
-  year: 'Junior'
+    first:'Renee',
+    last: 'Williams',
+    position: 'Guard',
+    year: 'Senior'
+  },
+  {
+    first:'Jennifer',
+    last: 'Olsen',
+    position: 'Forward',
+    year: 'Junior'
   }
 ];
 //sets up table div and html for changing html elements
@@ -52,27 +52,30 @@ var html = '';
 
 //function to display table and bold Senior information
 function playerTable(){
-//for loop, for every player in the array, iterate through the list
-for(i = 0; i < players.length; i++){
-  //if a player is a senior, make their attributes (first, last, position, year) bolded and separate columns
-  if (players[i].year == 'Senior'){
+  //added headers
+  html += '<tr><th>First</th><th>Last</th><th>Position</th><th>Year</th></tr>';
+
+  //for loop, for every player in the array, iterate through the list
+  for(i = 0; i < players.length; i++){
+    //if a player is a senior, make their attributes (first, last, position, year) bolded and separate columns
+    if (players[i].year == 'Senior'){
       html += '<td><b>' + players[i].first + '</b>';
       html += '<td><b>' + players[i].last + '</b>';
       html += '<td><b>' + players[i].position + '</b>';
       html += '<td><b>' + players[i].year + '</b> <tr> </tr>';
       html += '</td>';
     }
-  //if a player is not a senior, make their attributes (first, last, position, year) into separate columns
-  else{
-    html += '<td>' + players[i].first;
-    html += '<td>' + players[i].last;
-    html += '<td>' + players[i].position;
-    html += '<td>' + players[i].year + '<tr> </tr>';
-    html += '</td>';
+    //if a player is not a senior, make their attributes (first, last, position, year) into separate columns
+    else{
+      html += '<td>' + players[i].first;
+      html += '<td>' + players[i].last;
+      html += '<td>' + players[i].position;
+      html += '<td>' + players[i].year + '<tr> </tr>';
+      html += '</td>';
+    }
   }
-}
-//place the html in the table div
-res.innerHTML = '<table>' + html + '</table>';
+  //place the html in the table div
+  res.innerHTML = '<table>' + html + '</table>';
 }
 //call the function
 playerTable();
@@ -88,41 +91,41 @@ var allStars = [
     position: 'Forward',
     school:'Johnson High School'
   },
-    {
+  {
     first:'Olivia',
     last: 'Carter',
     position: 'Foward',
     school:'Providence Day School'
   },
-    {
+  {
     first:'Sarah',
     last: 'Spangler',
     position: 'Forward',
     school:' Springfield High School'
   },
-   {
+  {
     first:'Ursula',
     last: 'Jones',
     position: 'Guard',
     school: 'Chatham Senior High School'
   },
-   {
+  {
     first:'Theresa',
     last: 'Hollinger',
     position: 'Guard',
     school: 'St. Joseph Academy'
   },
   {
-   first:'Darleen',
-   last: 'Lawrence',
-   position: 'Guard',
-   school: 'Everton High School'
- },
- {
-  first:'Jennifer',
-  last: 'Olsen',
-  position: 'Forward',
-  school: 'Springfield High School'
+    first:'Darleen',
+    last: 'Lawrence',
+    position: 'Guard',
+    school: 'Everton High School'
+  },
+  {
+    first:'Jennifer',
+    last: 'Olsen',
+    position: 'Forward',
+    school: 'Springfield High School'
   }
 ];
 
@@ -156,10 +159,13 @@ madeAllState();
 
 
 /*
+Some Sources I used for reference:
 https://www.w3schools.com/js/js_htmldom_html.asp
 https://www.w3schools.com/js/js_htmldom_elements.asp
 https://www.w3schools.com/js/js_htmldom_css.asp
 https://www.w3schools.com/jsref/jsref_bold.asp
 https://www.w3schools.com/tags/tag_b.asp
 https://www.w3schools.com/jsref/dom_obj_div.asp
+https://www.w3schools.com/js/js_htmldom_nodes.asp
+https://www.thesitewizard.com/javascripts/insert-div-block-javascript.shtml
 */
