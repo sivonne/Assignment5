@@ -53,11 +53,12 @@ var html = '';
 function playerTable(array){
 for(i = 0; i < array.length; i++){
   if (array[i].year == 'Senior'){
-      html += '<tr> <b>' + array[i].first + '</b>';
-      html += '<tr><b>' + array[i].last + '</b>';
-      html += '<tr><b>' + array[i].position + '</b>';
-      html += '<tr><b>' + array[i].year + '</b>';
-      html += '</tr>';
+      html += '<td><b>' + array[i].first + '</b>';
+      html += '<td><b>' + array[i].last + '</b>';
+      html += '<td><b>' + array[i].position + '</b>';
+      html += '<td><b>' + array[i].year + '</b> <tr> </tr>';
+      html += '</td>';
+
       console.log("you're a senior");
     }
   else{
