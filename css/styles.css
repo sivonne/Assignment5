@@ -3,6 +3,9 @@ table, th, td{
     border-collapse: collapse;
 }
 table{
-
-
+  width:100%;
+}
+#section-id{
+  margin-top: 10px;
+  padding-top: 10px;
 }
